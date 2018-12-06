@@ -1,0 +1,14 @@
+<div class="sidebar bg-dark">
+  <ul class="list-unstyled">
+    <li>
+      <a href="#submenu1" data-toggle="collapse">
+        Pages
+      </a>
+      <ul id="submenu1" class="list-unstyled collapse">
+        <li *ngIf=" hasRole('ROLE_ADMIN') "><a href="#" routerLink="./admin">Admin</a></li>
+        <li *ngIf=" hasRole('ROLE_ADMIN') || hasRole('ROLE_USER') "><a href="#" routerLink="./users">Users</a></li>
+        <li *ngIf=" hasRole('ROLE_ADMIN') || hasRole('ROLE_PM') "><a href="#" routerLink="./pmboard">PM</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
